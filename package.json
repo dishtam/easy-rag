@@ -1,14 +1,14 @@
 {
-  "name": "easy-rag-cli",
+  "name": "easy-rag-cli-cli",
   "version": "1.0.1",
-  "description": "Zero-config RAG for any codebase or document folder. npm install easy-rag and start asking questions.",
+  "description": "Zero-config RAG for any codebase or document folder. npm install easy-rag-cli and start asking questions.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dishtam/easy-rag.git"
+    "url": "https://github.com/dishtam/easy-rag-cli.git"
   },
   "main": "src/index.js",
   "bin": {
-    "easy-rag": "bin/easy-rag.js"
+    "easy-rag-cli": "bin/easy-rag-cli.js"
   },
   "scripts": {
     "test": "echo \"No tests yet\""
