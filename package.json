@@ -1,6 +1,6 @@
 {
   "name": "easy-rag-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Zero-config RAG for any codebase or document folder. Index your project and ask questions via CLI, browser, or code.",
   "main": "src/index.js",
   "bin": {
@@ -9,7 +9,17 @@
   "scripts": {
     "test": "echo \"No tests yet\""
   },
-  "keywords": ["rag", "llm", "ai", "openai", "ollama", "codebase", "search", "embeddings", "cli"],
+  "keywords": [
+    "rag",
+    "llm",
+    "ai",
+    "openai",
+    "ollama",
+    "codebase",
+    "search",
+    "embeddings",
+    "cli"
+  ],
   "author": "",
   "license": "MIT",
   "repository": {
