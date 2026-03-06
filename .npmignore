@@ -1,0 +1,5 @@
+.easy-rag-store.json
+easy-rag.config.json
+node_modules/
+*.log
+.env
