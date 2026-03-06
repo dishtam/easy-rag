@@ -1,5 +1,5 @@
 {
-  "name": "easy-rag",
+  "name": "ragcli",
   "version": "1.0.0",
   "description": "Zero-config RAG for any codebase or document folder. npm install easy-rag and start asking questions.",
   "repository": {
