@@ -1,6 +1,0 @@
-﻿node_modules/
-.easy-rag-cli-store.json
-easy-rag-cli.config.json
-*.log
-.env
-dist/

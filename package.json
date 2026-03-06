@@ -1,30 +1,25 @@
 {
-  "name": "easy-rag-cli-cli",
-  "version": "1.0.3",
-  "description": "Zero-config RAG for any codebase or document folder. npm install easy-rag-cli and start asking questions.",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dishtam/easy-rag-cli.git"
-  },
+  "name": "easy-rag-cli",
+  "version": "1.0.0",
+  "description": "Zero-config RAG for any codebase or document folder. Index your project and ask questions via CLI, browser, or code.",
   "main": "src/index.js",
   "bin": {
-    "easy-rag-cli": "bin/easy-rag-cli.js"
+    "easy-rag-cli": "bin/easy-rag.js"
   },
   "scripts": {
     "test": "echo \"No tests yet\""
   },
-  "keywords": [
-    "rag",
-    "llm",
-    "ai",
-    "openai",
-    "ollama",
-    "codebase",
-    "search",
-    "embeddings"
-  ],
-  "author": "Rohit Roy",
+  "keywords": ["rag", "llm", "ai", "openai", "ollama", "codebase", "search", "embeddings", "cli"],
+  "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dishtam/easy-rag.git"
+  },
+  "homepage": "https://github.com/dishtam/easy-rag#readme",
+  "bugs": {
+    "url": "https://github.com/dishtam/easy-rag/issues"
+  },
   "dependencies": {
     "chalk": "^5.3.0",
     "commander": "^12.0.0",

@@ -1,11 +1,11 @@
-import fs from 'fs'
-import path from 'path'
+import fs from 'fs';
+import path from 'path';
 
-const CONFIG_FILE = 'easy-rag-cli-cli.config.json'
-const STORE_FILE = '.easy-rag-cli-cli-store.json'
+const CONFIG_FILE = 'easy-rag-cli.config.json';
+const STORE_FILE = '.easy-rag-cli-store.json';
 
 export const DEFAULT_CONFIG = {
-  provider: 'openai', // 'openai' | 'ollama'
+  provider: 'openai',          // 'openai' | 'ollama'
   openai: {
     apiKey: process.env.OPENAI_API_KEY || '',
     embeddingModel: 'text-embedding-3-small',
@@ -18,26 +18,12 @@ export const DEFAULT_CONFIG = {
   },
   index: {
     include: [
-      '**/*.js',
-      '**/*.ts',
-      '**/*.jsx',
-      '**/*.tsx',
-      '**/*.py',
-      '**/*.go',
-      '**/*.rs',
-      '**/*.java',
-      '**/*.c',
-      '**/*.cpp',
-      '**/*.h',
-      '**/*.md',
-      '**/*.txt',
-      '**/*.pdf',
-      '**/*.json',
-      '**/*.yaml',
-      '**/*.yml',
-      '**/*.html',
-      '**/*.css',
-      '**/*.sh',
+      '**/*.js', '**/*.ts', '**/*.jsx', '**/*.tsx',
+      '**/*.py', '**/*.go', '**/*.rs', '**/*.java',
+      '**/*.c', '**/*.cpp', '**/*.h',
+      '**/*.md', '**/*.txt', '**/*.pdf',
+      '**/*.json', '**/*.yaml', '**/*.yml',
+      '**/*.html', '**/*.css', '**/*.sh',
     ],
     exclude: [
       '**/node_modules/**',
@@ -48,40 +34,40 @@ export const DEFAULT_CONFIG = {
       '**/*.lock',
       '**/*.log',
     ],
-    chunkSize: 500, // tokens per chunk
-    chunkOverlap: 50, // overlap tokens
-    maxFileSize: 500000, // bytes - skip files larger than this
+    chunkSize: 500,       // tokens per chunk
+    chunkOverlap: 50,     // overlap tokens
+    maxFileSize: 500000,  // bytes - skip files larger than this
   },
   serve: {
     port: 3141,
     openBrowser: true,
   },
-}
+};
 
 export function loadConfig() {
-  const configPath = path.resolve(process.cwd(), CONFIG_FILE)
-  if (!fs.existsSync(configPath)) return DEFAULT_CONFIG
+  const configPath = path.resolve(process.cwd(), CONFIG_FILE);
+  if (!fs.existsSync(configPath)) return DEFAULT_CONFIG;
   try {
-    const raw = fs.readFileSync(configPath, 'utf-8')
-    const userConfig = JSON.parse(raw)
-    return deepMerge(DEFAULT_CONFIG, userConfig)
+    const raw = fs.readFileSync(configPath, 'utf-8');
+    const userConfig = JSON.parse(raw);
+    return deepMerge(DEFAULT_CONFIG, userConfig);
   } catch {
-    return DEFAULT_CONFIG
+    return DEFAULT_CONFIG;
   }
 }
 
 export function saveConfig(config) {
-  const configPath = path.resolve(process.cwd(), CONFIG_FILE)
-  fs.writeFileSync(configPath, JSON.stringify(config, null, 2))
-  return configPath
+  const configPath = path.resolve(process.cwd(), CONFIG_FILE);
+  fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+  return configPath;
 }
 
 export function getStorePath() {
-  return path.resolve(process.cwd(), STORE_FILE)
+  return path.resolve(process.cwd(), STORE_FILE);
 }
 
 function deepMerge(base, override) {
-  const result = { ...base }
+  const result = { ...base };
   for (const key of Object.keys(override)) {
     if (
       override[key] !== null &&
@@ -90,10 +76,10 @@ function deepMerge(base, override) {
       typeof base[key] === 'object' &&
       !Array.isArray(base[key])
     ) {
-      result[key] = deepMerge(base[key], override[key])
+      result[key] = deepMerge(base[key], override[key]);
     } else {
-      result[key] = override[key]
+      result[key] = override[key];
     }
   }
-  return result
+  return result;
 }
