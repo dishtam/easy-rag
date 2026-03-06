@@ -1,6 +1,6 @@
 {
   "name": "easy-rag-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Zero-config RAG for any codebase or document folder. npm install easy-rag and start asking questions.",
   "repository": {
     "type": "git",
