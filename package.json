@@ -2,6 +2,10 @@
   "name": "easy-rag",
   "version": "1.0.0",
   "description": "Zero-config RAG for any codebase or document folder. npm install easy-rag and start asking questions.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dishtam/easy-rag.git"
+  },
   "main": "src/index.js",
   "bin": {
     "easy-rag": "bin/easy-rag.js"
@@ -9,8 +13,17 @@
   "scripts": {
     "test": "echo \"No tests yet\""
   },
-  "keywords": ["rag", "llm", "ai", "openai", "ollama", "codebase", "search", "embeddings"],
-  "author": "",
+  "keywords": [
+    "rag",
+    "llm",
+    "ai",
+    "openai",
+    "ollama",
+    "codebase",
+    "search",
+    "embeddings"
+  ],
+  "author": "Rohit Roy",
   "license": "MIT",
   "dependencies": {
     "chalk": "^5.3.0",
